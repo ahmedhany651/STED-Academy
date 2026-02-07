@@ -1,0 +1,520 @@
+<!doctype html>
+<html>
+   <head>
+      <title>STED Platform</title>
+      <link rel="icon" type="image/x-icon" href="Images/logo1.png" />
+      <link rel="stylesheet" href="Home-Page-not.css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+         rel="stylesheet"
+      />
+      <style>
+         body {
+            margin: 0;
+            background-color: #f8f9fa;
+            margin-bottom: 1000px;
+            padding: 0px;
+            font-family: Nunito;
+         }
+
+         a {
+            text-decoration: none;
+         }
+         a:hover {
+            cursor: pointer;
+         }
+         button:hover {
+            cursor: pointer;
+         }
+         .contact-header {
+            background-color: #3180ce;
+            display: flex;
+            flex-direction: row;
+            padding: 7px 200px;
+            gap: 25px;
+            align-items: center;
+         }
+         .social-media {
+            display: flex;
+            flex-direction: row;
+            flex: 1;
+            gap: 15px;
+         }
+         .icon {
+            width: 25px;
+         }
+         .phone-email {
+            flex-direction: row;
+            text-align: center;
+            font-size: 17px;
+            color: #ffffff;
+            font-weight: 550;
+            flex: 1;
+            gap: 15px;
+         }
+         .header {
+            display: flex;
+            background-color: #fff;
+            justify-content: space-between;
+            flex-direction: row;
+            align-items: center;
+            padding: 15px;
+         }
+         .logo {
+            width: 100px;
+         }
+         .definition {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            margin-right: 35px;
+         }
+         .header-button {
+            display: flex;
+            flex: 1;
+            margin-left: 50px;
+            gap: 17px;
+            justify-content: center;
+         }
+
+         .header-button button:hover {
+            border-color: #000;
+            cursor: pointer;
+            opacity: 0.5;
+            padding: 20px 20px;
+         }
+
+         .header-button button:active {
+            display: flex;
+            flex: 1;
+            font-size: 18px;
+            font-weight: 700;
+            background-color: #fff;
+            justify-content: center;
+         }
+         .definition strong {
+            display: flex;
+            text-align: center;
+            padding-left: 15px;
+            font-size: 22px;
+            font-weight: 700;
+         }
+         .categories {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            flex: 2;
+            gap: 3px;
+         }
+         .categories a {
+            flex: 1;
+            font-size: larger;
+            color: #3180ce;
+            text-align: center;
+            padding: 5px 7px;
+            transition: all 0.15s;
+         }
+         .categories a:hover {
+            text-decoration: none;
+            background-color: #3180ce;
+            color: #ffffff;
+            border-radius: 20px;
+            padding: 10px 17px;
+         }
+         .start {
+            display: flex;
+            color: #ffffff;
+            flex-direction: column;
+            align-items: center;
+            top: 25%;
+            left: 25%;
+            right: 25%;
+            position: absolute;
+            background-color: #3180ce20;
+            padding: 50px;
+            text-align: center;
+            font-size: 60px;
+            font-weight: 700;
+            border-radius: 50px;
+            line-height: 70px;
+         }
+         .start-menu {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            position: relative;
+         }
+         .start-menu img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+         }
+         .button {
+            padding: 20px 15px;
+            margin-top: 20px;
+            margin-bottom: 15px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 800;
+            background-color: #3180ce;
+            justify-content: center;
+            border-color: #3180ce;
+            border-width: 5px;
+            border-radius: 45px;
+            transition: all 0.3s;
+            color: #ffffff;
+         }
+         .button:hover {
+            opacity: 0.5;
+            border-color: black;
+            margin-top: 15px;
+            margin-bottom: 20px;
+         }
+         .button:active {
+            background-color: #fff;
+            border-color: black;
+            opacity: 0.5;
+            border-color: black;
+            margin-top: 25px;
+            margin-bottom: 10px;
+         }
+         .return-button {
+            font-size: 75px;
+            background-color: #ffffff00;
+            border-radius: 50%;
+            width: 85px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+         }
+         .why-we {
+            display: flex;
+            flex-direction: column;
+            margin: 50px;
+            gap: 30px;
+         }
+         .cards-holder {
+            display: flex;
+            flex-shrink: initial;
+            flex-direction: row;
+            justify-items: left;
+            vertical-align: bottom;
+            gap: 20px;
+            background-color: #3180ce;
+            border-radius: 40px;
+            padding: 50px;
+         }
+         .card {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            font-size: 20px;
+            width: 100%;
+            color: #fff;
+            border-right: 5px rgb(0, 0, 0, 0.1) solid;
+            text-align: left;
+            background-color: #3180ce;
+            flex: 1;
+            transition: all 0.25s;
+            margin-top: 15px;
+            margin-bottom: 20px;
+         }
+         .card:hover {
+            margin-top: 5px;
+            margin-bottom: 30px;
+         }
+         .card-last {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            font-size: 20px;
+            color: #fff;
+            text-align: left;
+            background-color: #3180ce;
+            border-radius: 40px;
+            flex: 1;
+            transition: all 0.25s;
+            margin-top: 15px;
+            margin-bottom: 20px;
+         }
+         .card-last:hover {
+            margin-top: 5px;
+            margin-bottom: 30px;
+         }
+
+         .card b,
+         .card-last b {
+            font-size: 25px;
+         }
+         .card img,
+         .card-last img {
+            width: 70px;
+            padding: 25px;
+            padding-left: 50px;
+         }
+         .sub-header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 50px;
+         }
+         .white-cards-holder {
+            display: flex;
+            flex-direction: row;
+            gap: 50px;
+            justify-content: center;
+            align-items: top;
+         }
+         .white-card {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+            vertical-align: top;
+            width: 291px;
+            background-color: #fff;
+            border-radius: 25px;
+            padding: 70px 20px;
+            transition: all 0.25s;
+            margin-top: 15px;
+            margin-bottom: 20px;
+         }
+         .white-card span {
+            font-size: 20px;
+            font-weight: 500;
+            color: #2b2e36;
+         }
+         .white-card b {
+            font-size: 30px;
+            font-weight: 500;
+         }
+         .white-card img {
+            width: 251px;
+            border-radius: 20px;
+         }
+         .white-card:hover {
+            margin-top: 10px;
+            margin-bottom: 25px;
+         }
+      </style>
+   </head>
+
+   <body>
+      <div class="contact-header" id="header">
+         <div class="social-media">
+            <a href="https://www.youtube.com/" target="_blank">
+               <img src="Images/youtube-logo.png" class="icon" />
+            </a>
+            <a href="https://www.instagram.com/_.a7madhany._/" target="_blank">
+               <img src="Images/instagram-logo.png" class="icon" />
+            </a>
+            <a
+               href="https://api.whatsapp.com/send/?phone=%2B201007982455&text&type=phone_number&app_absent=0"
+               target="_blank"
+            >
+               <img src="Images/whatsapp-logo.png" class="icon" />
+            </a>
+            <a href="https://www.facebook.com/ahmad.hany.71404" target="_blank">
+               <img src="Images/facebook-logo.png" class="icon" />
+            </a>
+         </div>
+
+         <div class="phone-email">
+            <span
+               >01007982455
+               <img
+                  src="Images/telephone.png"
+                  style="width: 15px; margin-top: 5px"
+            /></span>
+            <span>|</span>
+            <span
+               >ahmedbeng2007@gmail.com
+               <img src="Images/gmail.png" style="width: 15px; margin-top: 5px"
+            /></span>
+         </div>
+      </div>
+
+      <div class="header">
+         <div class="definition">
+            <a href="index.html">
+               <img class="logo" src="Images/logo1.png" />
+            </a>
+            <strong>STED<br />Academy</strong>
+         </div>
+         <div class="categories">
+            <a href="index.html">Home</a>
+            <a href="Courses.html">Courses</a>
+            <a href="Tutors.html">Tutors</a>
+            <a href="Who-We-Are.html">Who We are</a>
+            <a href="Contact-Us.html">Contact Us</a>
+            <a href="Cart.html"
+               ><img src="Images/shopping-cart.png" class="icon"
+            /></a>
+         </div>
+         <div class="header-button">
+            <a href="Sign-in-page.html">
+               <button class="button">Sign in</button>
+            </a>
+            <a href="New-User-page.html">
+               <button class="button">New User</button>
+            </a>
+         </div>
+      </div>
+
+      <div class="start-menu">
+         <div>
+            <img src="Images/tutor-and-students.png" />
+         </div>
+         <div class="start">
+            Build Your Own Future
+            <a href="Courses.html">
+               <button class="button">Start now</button>
+            </a>
+         </div>
+      </div>
+
+      <div class="why-we">
+         <h1 style="margin-left: 20px; font-size: 50px">Why We?</h1>
+         <div class="cards-holder">
+            <div class="card">
+               <div><img src="Images/tap.png" /></div>
+               <div>
+                  <b>User-Friendly</b><br /><br /><span
+                     >Even if it’s your first time using an educational
+                     platform, you’ll find everything clear and easy, and you
+                     can start publishing your courses in seconds!</span
+                  >
+               </div>
+            </div>
+
+            <div class="card">
+               <div><img src="Images/technical-support.png" /></div>
+               <div>
+                  <b>Available Support</b><br /><br /><span
+                     >If you need any help, our team is ready to respond quickly
+                     and solve any problem you face!</span
+                  >
+               </div>
+            </div>
+
+            <div class="card">
+               <div><img src="Images/devices.png" /></div>
+               <div>
+                  <b>Compatible with All Devices</b><br /><br /><span
+                     >Whether students are following from a mobile, tablet, or
+                     computer, our platform looks great on any screen!</span
+                  >
+               </div>
+            </div>
+
+            <div class="card-last">
+               <div><img src="Images/performance.png" /></div>
+               <div>
+                  <b>Fast and Exceptional Performance</b><br /><br /><span
+                     >Our platform is designed to run quickly and smoothly, so
+                     you can focus on teaching your courses without any
+                     interruptions!</span
+                  >
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="why-we">
+         <div class="sub-header">
+            <h1 style="margin-left: 20px; font-size: 50px">Our Tutors</h1>
+            <a href="Tutors.html"><button class="button">Show all</button></a>
+         </div>
+         <div class="white-cards-holder">
+            <div class="white-card">
+               <div><img src="Images/Eng.Ahmed Hany.jpg" /></div>
+               <div>
+                  <b>Eng. Ahmed Hany</b><br /><br /><span
+                     >Engineering Student at Egypt University of
+                     Informatics</span
+                  >
+               </div>
+            </div>
+
+            <div class="white-card">
+               <div><img src="Images/Eng.Omer Risk.jpg" /></div>
+               <div>
+                  <b>Eng. Omer Risk</b><br /><br /><span
+                     >Engineering Student at Zagazig</span
+                  >
+               </div>
+            </div>
+
+            <div class="white-card">
+               <div><img src="Images/Unknown.png" /></div>
+               <div>
+                  <b>Eng. Mohamed Amr</b><br /><br /><span
+                     >Engineering Student at Zagazig</span
+                  >
+               </div>
+            </div>
+
+            <div class="white-card">
+               <div><img src="Images/Dr.Mohamed Elsayed.jpg" /></div>
+               <div>
+                  <b>Dr. Mohamed ELsayed</b><br /><br /><span
+                     >Medicine Student at Zagazig University</span
+                  >
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="why-we">
+         <div class="sub-header">
+            <h1 style="margin-left: 20px; font-size: 50px">Our Courses</h1>
+            <a href="Tutors.html"><button class="button">Show all</button></a>
+         </div>
+         <div class="white-cards-holder">
+            <div class="white-card">
+               <div><img src="Images/calculus.png" /></div>
+               <div>
+                  <b>Analytic Calculus</b><br /><br /><span
+                     >Lecturer: Eng. Ahmed Hany</span
+                  >
+               </div>
+            </div>
+
+            <div class="white-card">
+               <div><img src="Images/python.webp" /></div>
+               <div>
+                  <b>Python Fundamentals</b><br /><br /><span
+                     >Lecturer: Eng. Omer Risk</span
+                  >
+               </div>
+            </div>
+
+            <div class="white-card">
+               <div><img src="Images/chemistry.png" /></div>
+               <div>
+                  <b>Chemistry for Engineers</b><br /><br /><span
+                     >Lecturer: Eng. Mohamed Amr</span
+                  >
+               </div>
+            </div>
+
+            <div class="white-card">
+               <div><img src="Images/anatomy.jpg" /></div>
+               <div>
+                  <b>Anatomy</b><br /><br /><span
+                     >Lecturer: Dr. Mohamed Elsayed</span
+                  >
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <a href="#header"><button class="return-button">&#8593;</button></a>
+   </body>
+</html>
